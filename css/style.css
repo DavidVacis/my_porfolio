@@ -1,0 +1,198 @@
+/* Variables de colores */
+:root {
+    --primary-color: #1E88E5;
+    --secondary-color: #42A5F5;
+    --dark-bg: #0D47A1;
+    --light-bg: #E3F2FD;
+    --accent-color: #FF5252;
+    --neutral-color: #FAFAFA;
+}
+
+/* General */
+body {
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    background-color: var(--dark-bg);
+    color: var(--neutral-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hero Section */
+.hero-container {
+    position: relative;
+    height: 100vh;
+    background: url("../img/c.jpg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--neutral-color);
+}
+
+.hero-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--dark-bg));
+    z-index: -1;
+}
+
+.hero-container .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-container .navbar .logo a {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.hero-container .navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.hero-container .navbar .nav-links li {
+    margin: 0 1rem;
+}
+
+.hero-container .navbar .nav-links li a {
+    color: var(--neutral-color);
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.hero-container .navbar .nav-links li a:hover {
+    color: var(--accent-color);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* About Section */
+.about {
+    background-color: var(--dark-bg);
+    padding: 5rem 2rem;
+}
+
+.about .about-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.about .about-container .about-image-container {
+    width: 45%;
+    text-align: center;
+}
+
+.about .about-container .about-image-container img {
+    width: 75%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--primary-color);
+}
+
+.about .about-container .about-image-container .social-icons a {
+    font-size: 1.5rem;
+    margin: 0 1rem;
+    color: var(--neutral-color);
+    transition: color 0.3s;
+}
+
+.about .about-container .about-image-container .social-icons a:hover {
+    color: var(--accent-color);
+}
+
+.about .about-container .about-text-container {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.about .about-container .about-text-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.about .about-container .about-text-container p {
+    margin-bottom: 1rem;
+    color: var(--neutral-color);
+}
+
+.about .about-container .about-text-container .portfolio-images img {
+    width: 30%;
+    margin: 1rem;
+    border-radius: 8px;
+    border: 2px solid var(--secondary-color);
+}
+
+/* Proyectos Section */
+.proyectos {
+    background-color: var(--light-bg);
+    padding: 3rem 2rem;
+    color: var(--dark-bg);
+}
+
+.proyectos .proyectos-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.proyectos .proyectos-container .cards .card {
+    width: 30%;
+    background-color: var(--secondary-color);
+    color: var(--neutral-color);
+    border-radius: 8px;
+    margin: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.proyectos .proyectos-container .cards .card:hover {
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--neutral-color);
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+}
